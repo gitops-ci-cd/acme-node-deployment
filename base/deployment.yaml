@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: acme-node
+  name: acme-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acme-node
+  template:
+    metadata:
+      labels:
+        app: acme-node
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/gitops-ci-cd/acme-node:b76f68469b0a13d08563b92b1ece4981a65ba37e
+          ports:
+            - name: web
+              containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100M
+            limits:
+              cpu: 200m
+              memory: 200M
