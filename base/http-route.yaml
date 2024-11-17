@@ -5,12 +5,8 @@ metadata:
   name: acme-node
 spec:
   parentRefs:
-    - kind: Gateway
-      name: http
-      namespace: kube-system
-  hostnames:
-    - localhost
-  rules:
-    - backendRefs:
-        - name: acme-node
-          port: 80
+    - name: acme-node
+      kind: Service
+      group: core
+      port: 80
+  rules: {}
