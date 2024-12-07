@@ -1,0 +1,7 @@
+---
+apiVersion: acme.com/v1alpha1
+kind: AcmeApp
+metadata:
+  name: acme-node
+spec:
+  appName: acme-node
