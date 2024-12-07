@@ -3,5 +3,6 @@ apiVersion: acme.com/v1alpha1
 kind: AcmeApp
 metadata:
   name: acme-node
+  namespace: acme-node-sandbox
 spec:
   appName: acme-node
