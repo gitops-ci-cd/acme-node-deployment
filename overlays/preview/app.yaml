@@ -1,6 +1,6 @@
 ---
 apiVersion: acme.com/v1alpha1
-kind: AcmeApp
+kind: AcmeAppClaim
 metadata:
   name: acme-node
   namespace: acme-node-sandbox
