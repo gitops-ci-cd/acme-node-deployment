@@ -14,7 +14,7 @@ spec:
       group: core
       port: 80
   hostnames:
-    - "node.acme.localhost"
+    - "acme-node.localhost"
   rules:
     - matches:
         - path:
