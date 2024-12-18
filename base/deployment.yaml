@@ -24,9 +24,9 @@ spec:
             - name: NODE_ENV
               value: production
             - name: GREETING_SERVICE_URL
-              value: person-service.person-service-local.svc.cluster.local:50051
+              value: person-service.person-service-local.svc.cluster.local
             - name: PERSON_SERVICE_URL
-              value: greeting-service.greeting-service-local.svc.cluster.local:50051
+              value: greeting-service.greeting-service-local.svc.cluster.local
           ports:
             - name: web
               containerPort: 8080
