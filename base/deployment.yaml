@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/gitops-ci-cd/acme-node:6f7208b921cd16f4780b5ba7a2f178d2128a842f
+          image: ghcr.io/gitops-ci-cd/acme-node:4b7e5826c83c67880747dce4cba4e8d715746e8b
           env:
             - name: PORT
               value: "8080"
