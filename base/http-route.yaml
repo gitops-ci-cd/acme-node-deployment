@@ -16,12 +16,6 @@ spec:
         - path:
             type: PathPrefix
             value: "/"
-      filters:
-        - type: RequestHeaderModifier
-          requestHeaderModifier:
-            add:
-              - name: x-feature-branch
-                value: "{{request.host | split('.')[0]}}"
       backendRefs:
         - group: ''
           kind: Service
