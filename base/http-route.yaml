@@ -10,12 +10,18 @@ spec:
       name: external-http-gateway
       namespace: traefik
   hostnames:
-    - "acme-node.localhost"
+    - "*.acme-node.localhost"
   rules:
     - matches:
         - path:
             type: PathPrefix
             value: "/"
+      filters:
+        - type: RequestHeaderModifier
+          requestHeaderModifier:
+            add:
+              - name: x-feature-branch
+                value: "{{request.host | split('.')[0]}}"
       backendRefs:
         - group: ''
           kind: Service
