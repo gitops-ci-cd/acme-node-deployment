@@ -22,3 +22,9 @@ spec:
           name: acme-node
           port: 80
           weight: 1
+    - backendRefs:
+        - group: ''
+          kind: Service
+          name: acme-node
+          port: 80
+          weight: 1
