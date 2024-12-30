@@ -4,3 +4,26 @@ kind: Kustomization
 
 resources:
   - ../../base
+
+patches:
+  - path: deployment.yaml
+  - target:
+      kind: HTTPRoute
+      name: acme-node-route
+    patch: |-
+      - op: add
+        path: /spec/rules/0/matches/0/headers
+        value: []
+      - op: add
+        path: /spec/rules/0/matches/0/headers/-
+        value:
+          name: x-subdomain
+          type: Exact
+          value: www
+  - target:
+      kind: Service
+      name: acme-node
+    patch: |-
+      - op: add
+        path: /spec/selector/environment
+        value: production

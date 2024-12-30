@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    environment: sandbox
+  name: acme-node
+spec:
+  selector:
+    matchLabels:
+      environment: sandbox
+  template:
+    metadata:
+      labels:
+        environment: sandbox
