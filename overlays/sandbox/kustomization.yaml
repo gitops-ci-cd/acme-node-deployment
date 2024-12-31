@@ -20,6 +20,12 @@ patches:
           name: x-subdomain
           type: Exact
           value: sandbox
+      - op: add
+        path: /spec/rules/-
+        value:
+          backendRefs:
+            - name: acme-node
+              port: 80
   - target:
       kind: Service
       name: acme-node
