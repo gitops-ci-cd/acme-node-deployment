@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/gitops-ci-cd/acme-node:8222c1a60cdc7ebe368547dfef0651cc4c28d11a
+          image: ghcr.io/gitops-ci-cd/acme-node:5d28347aff3eeff165eb4bea44b19e5844c1c057
           env:
             - name: PORT
               value: "8080"
@@ -26,8 +26,6 @@ spec:
               value: production
             - name: OTEL_SERVICE_NAME
               value: acme-node
-            - name: OTEL_PROPAGATORS
-              value: tracecontext,baggage
             - name: GREETING_SERVICE_URL
               value: greeting-service.greeting-service-local.svc.cluster.local:50051
             - name: PERSON_SERVICE_URL
