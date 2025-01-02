@@ -17,4 +17,4 @@ spec:
         - name: app
           env:
             - name: LOG_LEVEL
-              value: DEBUG
+              value: debug
