@@ -5,11 +5,6 @@ kind: Kustomization
 resources:
   - ../../base
 
-images:
-  - name: acme-node
-    newName: ghcr.io/gitops-ci-cd/acme-node
-    newTag: bcf3ee6ad8f837a2790d032bf66d6547739caf82
-
 patches:
   - path: deployment.yaml
   - target:
