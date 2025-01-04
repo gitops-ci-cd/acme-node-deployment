@@ -26,8 +26,10 @@ spec:
               value: production
             - name: OTEL_SERVICE_NAME
               value: acme-node
-            - name: OTEL_PROPAGATORS
-              value: tracecontext,baggage
+            - name: OTEL_NODE_RESOURCE_DETECTORS
+              value: env,host,os,process,serviceinstance,container
+            - name: OTEL_NODE_ENABLED_INSTRUMENTATIONS
+              value: dns,http,express,grpc
             - name: GREETING_SERVICE_URL
               value: greeting-service.greeting-service-local.svc.cluster.local:50051
             - name: PERSON_SERVICE_URL
