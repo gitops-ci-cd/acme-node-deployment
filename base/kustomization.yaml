@@ -10,4 +10,4 @@ resources:
 images:
   - name: acme-node
     newName: ghcr.io/gitops-ci-cd/acme-node
-    newTag: cd011d4fdaed6f4533515fdbd3b802f10d41e556
+    newTag: 4fa94d6cbcc9b2f937181f5b2483632372f0be6c
