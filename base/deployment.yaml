@@ -35,7 +35,7 @@ spec:
             - name: OTEL_NODE_RESOURCE_DETECTORS
               value: env,host,os,process,serviceinstance,container
             - name: OTEL_NODE_ENABLED_INSTRUMENTATIONS
-              value: dns,http,express,grpc
+              value: dns,http,grpc
           ports:
             - name: web
               containerPort: 8080
