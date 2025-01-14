@@ -8,5 +8,3 @@ images:
 - name: acme-node
   newName: ghcr.io/gitops-ci-cd/acme-node
   newTag: 4c1ec24034920bf8627a8118fe8f068cf83ebb95
-- name: ghcr.io/gitops-ci-cd/acme-node
-  newTag: d5040f6714cb5a82584944bce02c32a798839abb
