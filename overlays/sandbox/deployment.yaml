@@ -12,3 +12,11 @@ spec:
     metadata:
       labels:
         environment: sandbox
+    spec:
+      containers:
+        - name: app
+          env:
+            - name: GREETING_SERVICE_URL
+              value: greeting-service.greeting-service-sandbox.svc.cluster.local:50051
+            - name: PERSON_SERVICE_URL
+              value: person-service.person-service-sandbox.svc.cluster.local:50051

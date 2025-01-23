@@ -26,3 +26,7 @@ spec:
               value: none
             - name: OTEL_LOGS_EXPORTER
               value: none
+            - name: GREETING_SERVICE_URL
+              value: greeting-service.greeting-service-local.svc.cluster.local:50051
+            - name: PERSON_SERVICE_URL
+              value: person-service.person-service-local.svc.cluster.local:50051

@@ -12,3 +12,11 @@ spec:
     metadata:
       labels:
         environment: production
+    spec:
+      containers:
+        - name: app
+          env:
+            - name: GREETING_SERVICE_URL
+              value: greeting-service.greeting-service-production.svc.cluster.local:50051
+            - name: PERSON_SERVICE_URL
+              value: person-service.person-service-production.svc.cluster.local:50051
