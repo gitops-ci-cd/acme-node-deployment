@@ -14,3 +14,10 @@ patches:
       - op: add
         path: /spec/selector/environment
         value: local
+  - target:
+      kind: HTTPRoute
+      name: acme-node-route
+    patch: |-
+      - op: add
+        path: /spec/hostnames/-
+        value: "*.acme-node.localhost"

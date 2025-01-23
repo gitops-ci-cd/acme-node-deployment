@@ -14,3 +14,13 @@ patches:
       - op: add
         path: /spec/selector/environment
         value: sandbox
+  - target:
+      kind: HTTPRoute
+      name: acme-node-route
+    patch: |-
+      - op: add
+        path: /spec/hostnames/-
+        value: "sandbox.dudo.dev"
+      - op: add
+        path: /spec/hostnames/-
+        value: "*.dudo.dev"
